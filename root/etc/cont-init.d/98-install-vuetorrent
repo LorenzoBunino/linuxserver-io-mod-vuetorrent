@@ -16,15 +16,20 @@ LATEST_RELEASE=$(curl -s -L https://api.github.com/repos/wdaan/vuetorrent/releas
 if [ ! -d /vuetorrent ]; then
   echo "Running installer..."
 
-  curl -O -J -L $LATEST_RELEASE && \
-  unzip vuetorrent.zip -d /
+  curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d /
 
   # Remove zip after unpacking
   rm /vuetorrent.zip
 
   echo "Done! The theme is installed in the root folder. Apply it from WEBUI settings."
 else
-  echo "VueTorrent theme is already installed. Exiting..."
+  echo "Running alternate installer..."
+
+  curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d /temp-vuetorrent
+
+  mv /temp-vuetorrent/vuetorrent/* /vuetorrent
+
+  rmdir /temp-vuetorrent
+
+  rm vuetorrent.zip
 fi
-
-
