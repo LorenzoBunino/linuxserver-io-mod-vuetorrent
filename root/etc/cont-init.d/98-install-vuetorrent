@@ -27,10 +27,8 @@ else
 
   curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d /temp-vuetorrent
 
-  cp /temp-vuetorrent/vuetorrent/* /vuetorrent # mv throws error
-  rm /temp-vuetorrent/vuetorrent/*
-
-  rmdir /temp-vuetorrent
+  cp -r /temp-vuetorrent/vuetorrent/* /vuetorrent # mv throws error
+  rm -r temp-vuetorrent
 
   rm vuetorrent.zip
 
