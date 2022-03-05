@@ -27,9 +27,12 @@ else
 
   curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d /temp-vuetorrent
 
-  mv /temp-vuetorrent/vuetorrent/* /vuetorrent
+  cp /temp-vuetorrent/vuetorrent/* /vuetorrent # mv throws error
+  rm /temp-vuetorrent/vuetorrent/*
 
   rmdir /temp-vuetorrent
 
   rm vuetorrent.zip
+
+  echo "Done! The theme is installed in the root folder."
 fi
