@@ -8,10 +8,18 @@ LATEST_RELEASE=$(curl -s -L https://api.github.com/repos/wdaan/vuetorrent/releas
               | tr -d \" \
               | xargs) # to trim whitespace
 
+download_vuetorrent () {
+  curl -O -J -L $LATEST_RELEASE
+}
+
+extract_vuetorrent () {
+  unzip vuetorrent.zip -d %1 | awk 'BEGIN {ORS=""} {if(NR%2==0)print "."}'
+}
+
 if [ ! -d /vuetorrent ]; then
   echo "Running installer..."
 
-  curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d / | awk 'BEGIN {ORS=" "} {if(NR%2==0)print "."}'
+  download_vuetorrent && extract_vuetorrent /
 
   # Remove zip after unpacking
   rm /vuetorrent.zip
@@ -20,7 +28,7 @@ if [ ! -d /vuetorrent ]; then
 else
   echo "Running alternate installer..."
 
-  curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d /temp-vuetorrent
+  download_vuetorrent && extract_vuetorrent /temp-vuetorrent
 
   cp -r /temp-vuetorrent/vuetorrent/* /vuetorrent # mv throws error
   rm -r temp-vuetorrent
