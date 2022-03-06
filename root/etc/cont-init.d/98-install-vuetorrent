@@ -1,11 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-cat <<EOF
----
-VueTorrent Theme Installer
-Source: https://github.com/WDaan/VueTorrent
----
-EOF
+cat installer-title-art
 
 LATEST_RELEASE=$(curl -s -L https://api.github.com/repos/wdaan/vuetorrent/releases/latest \
               | grep "browser_download_url.*zip" \
