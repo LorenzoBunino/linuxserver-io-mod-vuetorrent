@@ -2,23 +2,27 @@
 
 BLUE="\033[0;34m"
 LIGHT_CYAN="\033[1;36m"
+DARK_GRAY="\033[1;30m"
+
+PC=$LIGHT_CYAN # Primary Color
+SC=$BLUE # Secondary Color
 NC="\033[0m" # No Color
 
 echo -e "-------------------------------------
-${LIGHT_CYAN} _____ ${BLUE}        _____
-${LIGHT_CYAN}|     |${BLUE}       //////
-${LIGHT_CYAN}|     |${BLUE}      //////
-${LIGHT_CYAN}|     |${BLUE}     //////
-${LIGHT_CYAN}|     |${BLUE}    //////
-${LIGHT_CYAN}|     |${BLUE}   //////
-${LIGHT_CYAN}|     |${BLUE}  //////   _____       ${NC}The sleekest looking WebUI for qBittorrent made with Vue.js!
-${LIGHT_CYAN}|     |${BLUE} //////   //////       ${DARK_GRAY}|  Vue, qBittorrent, Vuetify
-${LIGHT_CYAN}|     |${BLUE}//////   //////
-${LIGHT_CYAN}|     |${BLUE}/////   //////
-${LIGHT_CYAN}|     |${BLUE}////${LIGHT_CYAN}   ____________
-${LIGHT_CYAN}|     |${BLUE}///${LIGHT_CYAN}   /           /
-${LIGHT_CYAN}|     |${BLUE}//${LIGHT_CYAN}   /           /
-${LIGHT_CYAN}|_____|${BLUE}/${LIGHT_CYAN}   /___________/${NC}
+${PC} _____ ${SC}        _____
+${PC}|     |${SC}       //////
+${PC}|     |${SC}      //////
+${PC}|     |${SC}     //////
+${PC}|     |${SC}    //////
+${PC}|     |${SC}   //////
+${PC}|     |${SC}  //////   _____       ${NC}The sleekest looking WebUI for qBittorrent made with Vue.js!
+${PC}|     |${SC} //////   //////       ${DARK_GRAY}|  Vue, qBittorrent, Vuetify
+${PC}|     |${SC}//////   //////
+${PC}|     |${SC}/////   //////
+${PC}|     |${SC}////${PC}   ____________
+${PC}|     |${SC}///${PC}   /           /
+${PC}|     |${SC}//${PC}   /           /
+${PC}|_____|${SC}/${PC}   /___________/${NC}
 
 -------------------------------------
 
