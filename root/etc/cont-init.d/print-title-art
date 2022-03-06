@@ -16,12 +16,12 @@ ${PC}|     |${SC}     //////
 ${PC}|     |${SC}    //////
 ${PC}|     |${SC}   //////
 ${PC}|     |${SC}  //////   _____       ${NC}The sleekest looking WebUI for qBittorrent made with Vue.js!
-${PC}|     |${SC} //////   //////       ${DARK_GRAY}|  Vue, qBittorrent, Vuetify
+${PC}|     |${SC} //////   //////       ${DARK_GRAY}|  Vue, qBittorrent, Vuetify${NC}
 ${PC}|     |${SC}//////   //////
 ${PC}|     |${SC}/////   //////
-${PC}|     |${SC}////${PC}   ____________
-${PC}|     |${SC}///${PC}   /           /
-${PC}|     |${SC}//${PC}   /           /
+${PC}|     |${SC}////${PC}   ____________${NC}
+${PC}|     |${SC}///${PC}   /           /${NC}
+${PC}|     |${SC}//${PC}   /           /${NC}
 ${PC}|_____|${SC}/${PC}   /___________/${NC}
 
 -------------------------------------
