@@ -11,7 +11,7 @@ LATEST_RELEASE=$(curl -s -L https://api.github.com/repos/wdaan/vuetorrent/releas
 if [ ! -d /vuetorrent ]; then
   echo "Running installer..."
 
-  curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d /
+  curl -O -J -L $LATEST_RELEASE && unzip vuetorrent.zip -d / | awk 'BEGIN {ORS=" "} {if(NR%2==0)print "."}'
 
   # Remove zip after unpacking
   rm /vuetorrent.zip
