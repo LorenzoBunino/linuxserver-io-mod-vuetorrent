@@ -8,6 +8,9 @@ LATEST_RELEASE=$(curl -s -L https://api.github.com/repos/wdaan/vuetorrent/releas
               | tr -d \" \
               | xargs) # to trim whitespace
 
+LATEST_RELEASE_VERSION=${LATEST_RELEASE%/*}
+LATEST_RELEASE_VERSION=${LATEST_RELEASE_VERSION##*/}
+
 download_vuetorrent () {
   curl -O -J -L $LATEST_RELEASE
 }
@@ -17,7 +20,7 @@ extract_vuetorrent () {
 }
 
 if [ ! -d /vuetorrent ]; then
-  echo "Running installer..."
+  echo "Installing" $LATEST_RELEASE_VERSION"...\n"
 
   if download_vuetorrent; then
     extract_vuetorrent /
@@ -27,7 +30,7 @@ if [ ! -d /vuetorrent ]; then
     echo "Done! The theme is installed in the root folder. Apply it from WEBUI settings."
   fi
 else
-  echo "Running alternate installer..."
+  echo "Installing" $LATEST_RELEASE_VERSION "using the alternate installer...\n"
 
   if download_vuetorrent; then
     extract_vuetorrent /temp-vuetorrent
