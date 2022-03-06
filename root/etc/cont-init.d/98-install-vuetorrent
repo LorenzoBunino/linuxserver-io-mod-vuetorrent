@@ -19,21 +19,24 @@ extract_vuetorrent () {
 if [ ! -d /vuetorrent ]; then
   echo "Running installer..."
 
-  download_vuetorrent && extract_vuetorrent /
+  if download_vuetorrent; then
+    extract_vuetorrent /
 
-  # Remove zip after unpacking
-  rm /vuetorrent.zip
+    rm /vuetorrent.zip # Remove zip after unpacking
 
-  echo "Done! The theme is installed in the root folder. Apply it from WEBUI settings."
+    echo "Done! The theme is installed in the root folder. Apply it from WEBUI settings."
+  fi
 else
   echo "Running alternate installer..."
 
-  download_vuetorrent && extract_vuetorrent /temp-vuetorrent
+  if download_vuetorrent; then
+    extract_vuetorrent /temp-vuetorrent
 
-  cp -r /temp-vuetorrent/vuetorrent/* /vuetorrent # mv throws error
-  rm -r temp-vuetorrent
+    cp -r /temp-vuetorrent/vuetorrent/* /vuetorrent # mv throws error
+    rm -r temp-vuetorrent
 
-  rm vuetorrent.zip
+    rm vuetorrent.zip # Remove zip after unpacking
 
-  echo "Done! The theme is installed in the root folder."
+    echo "Done! The theme is installed in the root folder."
+  fi
 fi
