@@ -16,7 +16,7 @@ download_vuetorrent () {
 }
 
 extract_vuetorrent () {
-  unzip vuetorrent.zip -d $1 | awk 'BEGIN {ORS=""} {if(NR%2==0)print "."} END{print "\n"}'
+  unzip vuetorrent.zip -d $1 | awk 'BEGIN {print "Extracting...\n["; ORS=""} {if(NR%2==0)print "."} END {print "]\n"}'
 }
 
 if [ ! -d /vuetorrent ]; then
