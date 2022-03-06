@@ -1,20 +1,26 @@
--------------------------------------
- _____         _____
-|     |       //////
-|     |      //////
-|     |     //////
-|     |    //////
-|     |   //////
-|     |  //////   _____       The sleekest looking WebUI for qBittorrent made with Vue.js!
-|     | //////   //////       |  Vue, qBittorrent, Vuetify
-|     |//////   //////
-|     |/////   //////
-|     |////   ____________
-|     |///   /           /
-|     |//   /           /
-|_____|/   /___________/
+#!/usr/bin/with-contenv bash
+
+BLUE="\033[0;34m"
+LIGHT_CYAN="\033[1;36m"
+NC="\033[0m" # No Color
+
+echo -e "-------------------------------------
+${LIGHT_CYAN} _____ ${BLUE}        _____
+${LIGHT_CYAN}|     |${BLUE}       //////
+${LIGHT_CYAN}|     |${BLUE}      //////
+${LIGHT_CYAN}|     |${BLUE}     //////
+${LIGHT_CYAN}|     |${BLUE}    //////
+${LIGHT_CYAN}|     |${BLUE}   //////
+${LIGHT_CYAN}|     |${BLUE}  //////   _____       ${NC}The sleekest looking WebUI for qBittorrent made with Vue.js!
+${LIGHT_CYAN}|     |${BLUE} //////   //////       ${DARK_GRAY}|  Vue, qBittorrent, Vuetify
+${LIGHT_CYAN}|     |${BLUE}//////   //////
+${LIGHT_CYAN}|     |${BLUE}/////   //////
+${LIGHT_CYAN}|     |${BLUE}////${LIGHT_CYAN}   ____________
+${LIGHT_CYAN}|     |${BLUE}///${LIGHT_CYAN}   /           /
+${LIGHT_CYAN}|     |${BLUE}//${LIGHT_CYAN}   /           /
+${LIGHT_CYAN}|_____|${BLUE}/${LIGHT_CYAN}   /___________/${NC}
 
 -------------------------------------
 
 Source: https://github.com/WDaan/VueTorrent
--------------------------------------
+-------------------------------------"
